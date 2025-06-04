@@ -19,7 +19,7 @@ func main() {
 	router := httprouter.New()
 	router.PanicHandler = exception.ErrorHandler
 
-	router.GET("/transaction", GetTransaction)
+	router.GET("/orders", GetOrders)
 
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	slog.SetDefault(logger)
@@ -214,7 +214,7 @@ func runningSampleData(conn *pgx.Conn) {
 	}
 }
 
-func GetTransaction(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
+func GetOrders(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
 	conn, err := initDB()
 	if err != nil {
 		slog.Error("failed to init db")

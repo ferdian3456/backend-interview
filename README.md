@@ -17,10 +17,39 @@ This project is a http server api for backend interview purposes.
 ---
 
 ## 📄 Entity Relation Diagram (ERD)
+
 <p align="center">
-  <img src="ERD.jpg" style="width:300px;height:300px;">
+  <img src="ERD.jpg" style="width:900px;height:500px;">
 </p>
 
+## 📚 Database Table
+
+Here is a list of database table:
+1. User = to save user information such as username, email, contact_phone, etc
+2. Product = to save product information such as product name, description, etc
+3. Order = to save data related to order such as order amount, status, etc
+4. Transaction = to save data after user do transaction, such as 
+
+## 💥 Flow:
+```
+Seller and buyer create account -> Seller create a product -> Buyer order the product -> Buyer do transaction
+```
+
+## 📁 Project Structure
+```
+├── backend-interview/
+│   ├── db/                     -> contains sql script to create table
+│       ├── migrations/
+│   ├── helper/                 -> contains helper function 
+│   ├── model/                  -> contains mapped database entity in go
+│   ├── ERD.jpg                 -> entity relationship diagram 
+│   ├── go.mod                  -> go module
+│   ├── main.go                 -> main file
+│   ├── README.md               -> read me
+│   ├── docker-compose.yml      -> docker compose to run postgresql contains
+│   ├── .env.example            -> environment variable to setup project
+│   ├── .gitignore              -> git ignore to ignore .env and .idea
+```
 
 ## 🚀 Getting Started
 
@@ -43,6 +72,14 @@ make migrate-up
 3. Run http server
 ```
 go run main.go
+```
+4. Rename .env.example to .env and change enviroment variable to your desire
+```
+GO_PORT=localhost:8080
+POSTGRES_USER=yourusername
+POSTGRES_PASSWORD=yourpassword
+POSTGRES_DB=myshop
+POSTGRES_URL=postgres://yourusername:yourpassword@localhost:5432/myshop
 ```
 
 ## 🔌 API Endpoint

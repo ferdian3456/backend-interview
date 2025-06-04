@@ -16,6 +16,12 @@ This project is a http server api for backend interview purposes.
 
 ---
 
+## 📄 Entity Relation Diagram (ERD)
+<p align="center">
+  <img src="ERD.jpg" style="width:300px;height:300px;">
+</p>
+
+
 ## 🚀 Getting Started
 
 To set up and run this project locally, ensure the following are installed:
@@ -40,7 +46,7 @@ go run main.go
 ```
 
 ## 🔌 API Endpoint
-**GET** <code>/transaction</code>
+**GET** <code>/orders</code>
 **Response**
 ```
 {

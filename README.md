@@ -46,6 +46,7 @@ Seller and buyer create account -> Seller create a product -> Buyer order the pr
 │   ├── go.mod                  -> go module
 │   ├── main.go                 -> main file
 │   ├── README.md               -> read me
+│   ├── Makefile                -> to simplify generate sql file for up and down with go migrate
 │   ├── docker-compose.yml      -> docker compose to run postgresql contains
 │   ├── .env.example            -> environment variable to setup project
 │   ├── .gitignore              -> git ignore to ignore .env and .idea

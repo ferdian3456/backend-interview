@@ -70,17 +70,17 @@ docker compose up -d
 ```
 make migrate-up
 ```
-3. Run http server
-```
-go run main.go
-```
-4. Rename .env.example to .env and change enviroment variable to your desire
+3. Rename .env.example to .env and change enviroment variable to your desire
 ```
 GO_PORT=localhost:8080
 POSTGRES_USER=yourusername
 POSTGRES_PASSWORD=yourpassword
 POSTGRES_DB=myshop
 POSTGRES_URL=postgres://yourusername:yourpassword@localhost:5432/myshop
+```
+4. Run http server
+```
+go run main.go
 ```
 
 ## 🔌 API Endpoint
